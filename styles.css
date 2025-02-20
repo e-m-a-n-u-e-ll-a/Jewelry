@@ -1,0 +1,381 @@
+@font-face {
+    font-family: 'ITC Garamond Std';
+    src: url('./fonts/itc-garamond-std.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'iCiel Internacional', sans-serif;
+    src: url('./fonts/itc-garamond-std.otf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    font-family: 'iCiel Internacional', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-image: url('./images/b0c51cc30d3f52535c8fd34642534fd7.jpg');
+    background-size: cover;
+    background-position: 40% 50%;
+    height: 640px;
+
+    ul {
+        display: flex;
+        font-size: 14px;
+        padding: 16px 75px;
+        margin: 0;
+        color: rgba(255, 255, 255, 1);
+
+        li {
+            list-style-type: none;
+
+            a {
+                font-family: 'iCiel Internacional', sans-serif;
+                color: rgba(255, 255, 255, 1);
+                text-decoration: none;
+            }
+
+            &:not(:last-child)::after {
+                content: "/";
+                margin: 0 16px;
+            }
+        }
+    }
+
+    .arrow {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: 80%;
+
+        img {
+            width: 49.01px;
+            padding-right: 124px;
+            cursor: pointer;
+        }
+    }
+
+    .elipses {
+        padding-left: 75px;
+
+        .elipse-1 {
+            margin-right: 40px;
+        }
+    }
+}
+
+main {
+    section.our-jewelry {
+        display: flex;
+        justify-content: space-between;
+        padding: 101px 75px 0 75px;
+        background-image: url('./images/Vector\ 12.png');
+        background-color: rgba(214, 241, 250, 1);
+        background-repeat: no-repeat;
+        background-position: center -100%;
+        overflow: hidden;
+
+        h1 {
+            font-family: 'ITC Garamond Std', serif;
+            font-size: 64px;
+            margin-top: 0;
+        }
+
+        .jewelry {
+            font-size: 16px;
+            line-height: 26px;
+            color: rgba(63, 63, 63, 0.7);
+            width: 350px;
+        }
+
+        .bestie {
+            margin: 35px -10px;
+            height: 160px;
+        }
+
+        .container-images {
+            display: flex;
+            margin-right: -200px;
+
+            img {
+                height: 430px;
+                margin: 10px 10px;
+            }
+        }
+    }
+
+    section.items {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 35px;
+        padding: 75px;
+        flex: 0 1 calc(33.333% - 20px);
+        
+        .item {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            padding: 10px;
+        }
+        
+        .item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+        
+
+        .item img {
+            width: 300px;
+            height: 340px;
+        }
+
+        .item .description {
+            margin-bottom: 10px;
+        }
+
+        .item .price {
+            color: rgba(132, 132, 132, 1);
+            margin-top: 0;
+        }
+
+        .item {
+            position: relative;
+        }
+
+        .best-seller {
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: rgba(255, 255, 255, 1);
+            background-color: rgba(34, 34, 34, 1);
+            padding: 7px;
+            border-radius: 1%;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1200px) {
+    header {
+        background-image: none;
+        height: 300px;
+
+        nav {
+            height: 100%;
+            background-color: rgba(122, 177, 194, 0.70);
+        }
+
+        ul {
+            flex-direction: column;
+            padding: 10px 5px;
+
+            li {
+                &:not(:last-child)::after {
+                    content: "";
+                }
+
+                a {
+                    font-size: 50px;
+                    font-weight: bold;
+                    color: rgba(255, 255, 255, 1);
+                }
+            }
+
+            li:hover::after {
+                content: url('./images/Arrow\ 1.png');
+                color: black;
+                margin: 10px;
+                cursor: pointer;
+            }
+
+        }
+
+        .arrow {
+            display: none;
+        }
+
+        .elipses {
+            display: none;
+        }
+    }
+
+    main {
+        section.our-jewelry {
+            flex-direction: column;
+            padding: 0;
+            margin: 0;
+
+            .jewelry {
+                width: 100%;
+            }
+
+            .bestie {
+                margin: 0;
+                height: 160px;
+            }
+        }
+
+        .container-images {
+            flex-direction: column;
+            width: fit-content;
+
+            img {
+                margin: 10px 0;
+            }
+        }
+    }
+
+    section.items {
+        padding: 10px;
+
+        .item img {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 510px) {
+    header {
+        height: 200px;
+
+        ul {
+            li {
+                a {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
