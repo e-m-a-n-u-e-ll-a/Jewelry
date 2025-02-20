@@ -24,6 +24,24 @@ header {
     background-size: cover;
     background-position: 40% 50%;
     height: 640px;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        height: 640px;
+    }
+
+    &>* {
+        position: relative;
+        z-index: 10;
+    }
 
     ul {
         display: flex;
@@ -118,18 +136,18 @@ main {
         gap: 35px;
         padding: 75px;
         flex: 0 1 calc(33.333% - 20px);
-        
+
         .item {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             padding: 10px;
         }
-        
+
         .item:hover {
             transform: translateY(-5px);
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
             cursor: pointer;
         }
-        
+
 
         .item img {
             width: 300px;
